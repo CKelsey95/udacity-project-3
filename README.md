@@ -5,6 +5,7 @@
 
 circleCI screenshot: 
 ![alt text](docs/circleci.png)
+[![CircleCI](https://dl.circleci.com/status-badge/img/circleci/NvjYnvbBfWu29FJZ8tZvwX/4f4icvhv6HtzU9DLqQE2BL/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/circleci/NvjYnvbBfWu29FJZ8tZvwX/4f4icvhv6HtzU9DLqQE2BL/tree/main)
 
 
 RDS Screenshot:
