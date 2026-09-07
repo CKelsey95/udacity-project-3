@@ -1,4 +1,3 @@
-# Normalize bucket: extract plain name from ARN format (arn:aws:s3:::bucket-name)
 if [[ "$AWS_BUCKET" == arn:* ]]; then
     BUCKET="${AWS_BUCKET##*:::}"
 else
