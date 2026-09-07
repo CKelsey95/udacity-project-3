@@ -71,8 +71,6 @@ workflows:
             branches:
               only:
                 - main
-                - master
-                - udacity-project-3
           type: approval
           requires:
             - build
