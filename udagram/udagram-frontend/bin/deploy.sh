@@ -1,5 +1,8 @@
 if [[ "$AWS_BUCKET" == arn:* ]]; then
     BUCKET="${AWS_BUCKET##*:}"
+elif [[ "$AWS_BUCKET" == s3://* ]]; then
+    BUCKET="${AWS_BUCKET#s3://}"
+    BUCKET="${BUCKET%%/*}"
 else
     BUCKET="$AWS_BUCKET"
 fi
