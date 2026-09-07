@@ -1,3 +1,4 @@
+#!/bin/bash
 if [[ "$AWS_BUCKET" == arn:* ]]; then
     BUCKET="${AWS_BUCKET##*:}"
 
