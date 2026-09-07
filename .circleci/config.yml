@@ -42,11 +42,12 @@ jobs:
   deploy:
     docker:
       - image: "cimg/base:stable"
-    environment:
-      AWS_DEFAULT_REGION: $AWS_REGION
     steps:
+      - run:
+          name: Configure AWS region
+          command: echo "export AWS_DEFAULT_REGION=$AWS_REGION" >> $BASH_ENV
       - node/install:
-          node-version: '14.15' 
+          node-version: '14.15'
       - eb/setup
       - aws-cli/setup
       - checkout
