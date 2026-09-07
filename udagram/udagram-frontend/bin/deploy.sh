@@ -1,5 +1,5 @@
 if [[ "$AWS_BUCKET" == arn:* ]]; then
-    BUCKET="${AWS_BUCKET##*:::}"
+    BUCKET="${AWS_BUCKET##*:}"
 else
     BUCKET="$AWS_BUCKET"
 fi
