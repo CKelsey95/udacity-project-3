@@ -43,7 +43,7 @@ jobs:
     docker:
       - image: "cimg/base:stable"
     environment:
-      AWS_DEFAULT_REGION: $AWS_REGION
+      AWS_DEFAULT_REGION: us-east-2
     steps:
       - node/install:
           node-version: '14.15' 

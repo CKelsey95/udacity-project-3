@@ -1,2 +1,9 @@
-aws s3 cp --recursive --acl public-read ./www s3://$AWS_BUCKET
-aws s3 cp --acl public-read --cache-control="max-age=0, no-cache, no-store, must-revalidate" ./www/index.html s3://$AWS_BUCKET
+# Normalize bucket: extract plain name from ARN format (arn:aws:s3:::bucket-name)
+if [[ "$AWS_BUCKET" == arn:* ]]; then
+    BUCKET="${AWS_BUCKET##*:::}"
+else
+    BUCKET="$AWS_BUCKET"
+fi
+
+aws s3 cp --recursive --acl public-read ./www s3://$BUCKET
+aws s3 cp --acl public-read --cache-control="max-age=0, no-cache, no-store, must-revalidate" ./www/index.html s3://$BUCKET
